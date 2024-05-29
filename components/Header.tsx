@@ -1,5 +1,3 @@
-"use client";
-
 import { mono } from "@/pages/_app";
 import React from "react";
 
@@ -10,13 +8,13 @@ const Header: React.FC = () => {
         <div className="font-mono text-xl tracking-widest">fxx.best</div>
         <nav>
           <ul className="flex space-x-10 text-lg font-mono pl-36">
-            <li className="hover:text-gray-400 cursor-pointer transition-transform duration-500 ease-in-out transform hover:scale-105">
+            <li className="text-white hover:text-blue-400 cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-105">
               <a href="https://tritan.gg/about">About</a>
             </li>
-            <li className="hover:text-gray-400 cursor-pointer transition-transform duration-500 ease-in-out transform hover:scale-105">
+            <li className="text-white hover:text-blue-400 cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-105">
               <a href="mailto:fxx@kty.lol">Contact</a>
             </li>
-            <li className="hover:text-gray-400 cursor-pointer transition-transform duration-500 ease-in-out transform hover:scale-105">
+            <li className="text-white hover:text-blue-400 cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-105">
               <a href="https://github.com/devfxx">GitHub</a>
             </li>
           </ul>
