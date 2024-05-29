@@ -1,10 +1,8 @@
-"use client";
-
+import Bio from "@/components/Bio";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Bio from "../components/Bio";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 
 const Home: NextPage = () => {
   return (
@@ -17,7 +15,9 @@ const Home: NextPage = () => {
 
       <div
         className="flex flex-col items-start px-20 py-18 flex-grow bg-cover bg-center"
-        style={{ backgroundImage: 'url("/assets/spiral.jpg")' }}
+        style={{
+          backgroundImage: 'url("/assets/spiral.jpg")',
+        }}
       >
         <Header />
         <main className="flex-grow relative pt-24">
