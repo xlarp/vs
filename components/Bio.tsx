@@ -1,7 +1,4 @@
-"use client";
-
 import { mono } from "@/pages/_app";
-import { JetBrains_Mono } from "next/font/google";
 import React from "react";
 
 const Bio: React.FC = () => {
@@ -13,7 +10,7 @@ const Bio: React.FC = () => {
         </span>
       </h1>
       <div className={mono.className}>
-        <h2 className="text-xl mt-4 font-mono">Software / DevOps Engineer</h2>
+        <h2 className="text-xl mt-4 font-mono">Software / DevOps Wizard</h2>
         <p className="text-lg mt-4 font-mono">
           5 Years of Experience
           <br />
