@@ -10,6 +10,8 @@ const Home: NextPage = () => {
       <Head>
         <title>nya!~</title>
         <meta name="description" content="uwu" />
+        <meta name="theme-color" content="#5865F2" />
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -20,6 +22,7 @@ const Home: NextPage = () => {
         }}
       >
         <Header />
+
         <main className="flex-grow relative pt-24">
           <div className="relative mt-5">
             <Bio />
