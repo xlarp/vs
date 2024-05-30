@@ -6,19 +6,19 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="text-white bg-cust-gray py-12">
-      <div className="container mx-auto flex justify-between">
+    <footer className="text-white bg-cust-gray py-12 px-4 md:px-0">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between">
         <div className="text-2xl mb-4 font-mono">
           <div className={mono.className}>
             <div className="transition-all duration-500 ease-in-out transform hover:scale-105 text-white hover:text-blue-300 mb-1">
               <a href="https://fxx.best">fxx.best</a>
             </div>
-            <div className="text-sm opacity-70 transition-all duration-500 ease-in-out transform hover:scale-105 text-white hover:text-blue-300">
+            <div className="text-sm opacity-70 transition-all duration-500 ease-in-out transform hover:scale-105 text-white hover:text-blue-300 mb-4 md:mb-0">
               <a href="https://github.com/devfxx/fxx">src/</a>
             </div>
           </div>
         </div>
-        <div className="flex space-x-16">
+        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-16">
           <div>
             <div className="font-medium mb-4 flex items-center space-x-2 transition-all duration-500 ease-in-out transform hover:scale-105 text-white hover:text-blue-400">
               <WorldIcon className="h-5 w-5" />
@@ -66,9 +66,6 @@ const Footer: React.FC = () => {
                 <a href="https://discord.com/users/423452508372074506">
                   Discord
                 </a>
-              </li>
-              <li className="transition-transform duration-500 ease-in-out transform hover:scale-105">
-                <a href="GitHub">Email</a>
               </li>
             </ul>
           </div>
