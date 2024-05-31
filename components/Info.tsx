@@ -24,10 +24,14 @@ const About: React.FC = () => {
           </li>
           <li>
             <p>
-              I mostly work with Golang, TypeScript and AWS, but I{"'"}m always
-              eager to learn new technologies and languages.
-              <br />
-              <br />I{"'"}m currently working as a software engineer at{" "}
+              I{"'"}m experienced with a variety of programming languages and
+              technologies, including but not limited to Golang, TypeScript, C#,
+              and Docker.
+            </p>
+          </li>
+          <li>
+            <p>
+              I{"'"}m currently working as a software engineer at{" "}
               <a
                 className="transition-color text-blue-400 ease-in-out duration-200 hover:text-blue-500"
                 href={links.tritan.url}
