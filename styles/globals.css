@@ -16,9 +16,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      #1b1b1b);
+  background: linear-gradient(to bottom, transparent, #1b1b1b);
 }
 
 @layer utilities {
@@ -28,5 +26,5 @@ body {
 }
 
 body {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
 }
