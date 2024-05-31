@@ -14,6 +14,14 @@ const Footer: React.FC = () => {
     showToast(`Copied "${text}" to clipboard!`);
   };
 
+  const discordOwo = (e: any) => {
+    if (e.shiftKey || e.ctrlKey) {
+      window.open("https://discord.com/users/423452508372074506", "_blank");
+    } else {
+      clip(".fxx");
+    }
+  };
+
   return (
     <>
       <Toast message={toast.message} isActive={toast.isActive} />
@@ -78,7 +86,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-4 opacity-70">
                 <li className="transition-transform duration-500 ease-in-out transform hover:scale-105">
                   <button
-                    onClick={() => clip(".fxx")}
+                    onClick={discordOwo}
                     className="transition-transform duration-500 ease-in-out transform hover:scale-105"
                   >
                     Discord
