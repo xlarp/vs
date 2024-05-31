@@ -23,11 +23,11 @@ const Home: NextPage = () => {
       >
         <Header />
 
-        <main className="flex-grow relative pt-24">
+        <div className="flex-grow relative pt-24">
           <div className="relative mt-5">
             <Bio />
           </div>
-        </main>
+        </div>
       </div>
 
       <Footer />
