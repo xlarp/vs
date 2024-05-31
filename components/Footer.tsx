@@ -42,6 +42,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
+
           <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-16">
             <div>
               <div className="font-medium mb-4 flex items-center space-x-2 transition-all duration-500 ease-in-out transform hover:scale-105 text-white hover:text-blue-400">
@@ -62,6 +63,7 @@ const Footer: React.FC = () => {
                 </li>
               </ul>
             </div>
+
             <div>
               <div className="font-medium mb-4 flex items-center space-x-2 transition-all duration-500 ease-in-out transform hover:scale-105 text-white hover:text-purple-300">
                 <KittyIcon className="h-5 w-5" />
@@ -81,6 +83,7 @@ const Footer: React.FC = () => {
                 </li>
               </ul>
             </div>
+
             <div>
               <div className="font-medium mb-4 flex items-center space-x-2 transition-all duration-500 ease-in-out transform hover:scale-105 text-white hover:text-blue-400">
                 <EmailIcon className="h-5 w-5" />
