@@ -4,7 +4,7 @@ import React from "react";
 const Header: React.FC = () => {
   return (
     <div className={mono.className}>
-      <header className="flex flex-col md:flex-row justify-center md:justify-between items-center p-4 relative md:fixed text-white mt-8 w-full z-30 top-0 md:right-5 pr-60">
+      <header className="flex flex-col md:flex-row justify-center md:justify-between items-center p-4 relative md:fixed text-white mt-8 w-full z-30 top-0 md:right-0 md:pr-60">
         <div className="font-mono text-lg md:text-xl tracking-widest mb-4 md:mb-0 absolute w-full text-center md:relative md:text-left left-0 pl-40">
           fxx.best
         </div>
