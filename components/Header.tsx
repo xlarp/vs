@@ -11,10 +11,10 @@ const Header: React.FC = () => {
         <nav className="md:absolute right-0 pr-40">
           <ul className="flex flex-col md:flex-row space-y-4 md:pl-40 md:space-y-0 md:space-x-10 text-lg font-mono">
             <li className="text-white hover:text-blue-400 cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-105">
-              <a href="https://tritan.gg/about">About</a>
+              <a href="https://throwing.lol/fxx">Akkoma</a>
             </li>
             <li className="text-white hover:text-blue-400 cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-105">
-              <a href="mailto:fxx@kty.lol">Contact</a>
+              <a href="https://bsky.app/profile/fxx.kty.lol">BlueSky</a>
             </li>
             <li className="text-white hover:text-blue-400 cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-105">
               <a href="https://github.com/devfxx">GitHub</a>
