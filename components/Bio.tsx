@@ -10,7 +10,7 @@ const Bio: React.FC = () => {
         </span>
       </h1>
       <div className={mono.className}>
-        <h2 className="text-lg md:text-lg mt-4">Software / DevOps Wizard</h2>
+        <h2 className="text-xl md:text-lg mt-4">Software / DevOps Wizard</h2>
         <ul className="text-xl md:text-xl mt-4 space-y-2">
           <li>5 Years of Experience</li>
           <li>Golang and TypeScript</li>
