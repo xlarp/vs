@@ -4,7 +4,6 @@
 
 This site is available on the following domains:
 
-- [fxx.gay](https://fxx.gay)
 - [fxx.best](https://fxx.best)
 - [cattos.me](https://cattos.me)
 - [kitty.software](https://kitty.software)
