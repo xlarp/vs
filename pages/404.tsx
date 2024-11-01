@@ -8,7 +8,7 @@ const ErrorPage = () => {
       <div
         className="flex flex-col items-start px-20 py-18 flex-grow bg-cover bg-center"
         style={{
-          backgroundImage: 'url("/assets/spiral.png")',
+          backgroundImage: 'url("/assets/bg.jpg")',
         }}
       >
         <Header />

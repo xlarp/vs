@@ -11,10 +11,14 @@ module.exports = {
         mono: ["var(--font-mono)"],
       },
       colors: {
-        "cum-purple": "#5768FF",
-        "cust-gray": "#161616",
+        "custom-purple": "#5768FF",
+        "custom-orange": "#ff9933",
+        "custom-gray": "#161616",
+      },
+      textShadow: {
+        default: "2px 2px 4px rgba(0, 0, 0, 0.5)",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-textshadow")],
 };

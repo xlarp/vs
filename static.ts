@@ -1,21 +1,11 @@
 const links = {
-  tritan: {
-    url: "https://tritan.gg",
-    about: "https://tritan.gg/about",
-    github: "https://github.com/Team-Tritan",
-    discord: "https://discord.gg/b85N597sac",
-  },
   git: {
-    url: "https://git.kty.lol",
     siteRepo: "https://github.com/devfxx/fxx",
     projects: {
-      footjobs: "https://git.kty.lol/footjobs.today",
-      mail: "https://git.kty.lol/Team-Tritan/Disposable-Mail",
+      mail: "https://github.com/Team-Tritan/Disposable-Mail",
     },
   },
   socials: {
-    fediverse: "https://throwing.lol/fxx",
-    bluesky: "https://kty.lol",
     github: "https://github.com/devfxx",
     email: "fxx@kty.lol",
     discord: {
@@ -23,10 +13,10 @@ const links = {
     },
   },
   sites: {
-    me: "https://fxx.best",
+    me: "https://me.kty.lol",
     software: "https://kitty.software",
   },
-  theme: "#5865F2",
+  theme: "#ff9933",
 };
 
 export default links;

@@ -15,7 +15,7 @@ const Toast: React.FC<ToastProps> = ({ message, isActive }) => {
       style={{ marginLeft: "-15px" }}
     >
       <div
-        className={`bg-cum-purple text-white text-sm p-4 rounded m-4 mt-28 ${mono.className}`}
+        className={`bg-custom-orange text-white text-sm p-4 rounded m-4 mt-28 ${mono.className}`}
       >
         {message}
       </div>

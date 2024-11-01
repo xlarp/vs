@@ -5,11 +5,11 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-900 text-white">
+    <div className="min-h-screen flex flex-col">
       <div
         className="flex flex-col items-start px-20 py-18 flex-grow bg-cover bg-center"
         style={{
-          backgroundImage: 'url("/assets/spiral.png")',
+          backgroundImage: 'url("/assets/bg.jpg")',
         }}
       >
         <Header />
