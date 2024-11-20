@@ -1,4 +1,5 @@
-# fxx
+## Disclaimer
+In case of any confusion, 7fx and fxx are aliases, they both relate to me.
 
 ## Sites
 
