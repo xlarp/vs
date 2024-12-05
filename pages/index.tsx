@@ -1,3 +1,4 @@
+import React from "react";
 import Bio from "@/components/Bio";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";

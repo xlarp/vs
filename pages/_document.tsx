@@ -1,3 +1,4 @@
+import React from "react";
 import links from "@/static";
 import { Head, Html, Main, NextScript } from "next/document";
 

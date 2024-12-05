@@ -1,3 +1,4 @@
+import React from "react";
 import Info from "@/components/Info";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
