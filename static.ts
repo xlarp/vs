@@ -7,16 +7,15 @@ const links = {
   },
   socials: {
     github: "https://github.com/devfxx",
-    email: "fxx@kty.lol",
+    email: "fxx@throwing.lol",
     discord: {
       id: "423452508372074506",
     },
   },
   sites: {
-    me: "https://me.kty.lol",
-    software: "https://kitty.software",
+    me: "https://throwing.lol/",
   },
-  theme: "#ff9933",
+  theme: "#5000d0",
 };
 
 export default links;

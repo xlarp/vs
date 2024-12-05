@@ -1,3 +1,5 @@
+import config from "./static";
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -11,8 +13,7 @@ module.exports = {
         mono: ["var(--font-mono)"],
       },
       colors: {
-        "custom-purple": "#5768FF",
-        "custom-orange": "#ff9933",
+        "custom-main": config.theme,
         "custom-gray": "#161616",
       },
       textShadow: {
