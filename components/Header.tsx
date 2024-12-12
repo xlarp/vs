@@ -21,7 +21,6 @@ const Header: React.FC = () => {
             <li className="text-white hover:text-custom-main cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-105">
               <Link href="/skills">Skills</Link>
             </li>
-            -
           </ul>
         </nav>
       </header>
