@@ -5,7 +5,7 @@ const NotFound: React.FC = () => {
   return (
     <div className="text-white md:p-20 p-14">
       <h1 className="text-6xl md:text-7xl font-bold mb-4 font-khula">
-        <span className="bg-gradient-to-r from-white to-cum-purple text-transparent bg-clip-text">
+        <span className="bg-gradient-to-r from-purple-400 to-custom-main text-transparent bg-clip-text">
           404
         </span>
       </h1>

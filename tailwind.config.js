@@ -13,7 +13,7 @@ module.exports = {
         mono: ["var(--font-mono)"],
       },
       colors: {
-        "custom-main": config.theme,
+        "custom-main": config.colors.pink,
         "custom-gray": "#161616",
       },
       textShadow: {

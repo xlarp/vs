@@ -1,4 +1,4 @@
-const links = {
+const config = {
   git: {
     siteRepo: "https://github.com/devfxx/fxx",
     projects: {
@@ -15,7 +15,30 @@ const links = {
   sites: {
     me: "https://throwing.lol/",
   },
-  theme: "#5000d0",
+  colors: {
+    purple: "#5000d0",
+    pink: "#e879f9",
+  },
+  technical: {
+    languages: [
+      "JavaScript/TypeScript",
+      "Python",
+      "C#",
+      "Go",
+      "HTML/CSS",
+      "Lua/LuaU",
+    ],
+    frameworks: [
+      "Cloudflare & Workers",
+      "AWS / DigitalOcean",
+      "Roblox Studio",
+      "Docker",
+    ],
+    additional: [
+      "Reverse Engineering .NET & C / C++",
+      "OSINT & Reconnaissance",
+    ],
+  },
 };
 
-export default links;
+export default config;
