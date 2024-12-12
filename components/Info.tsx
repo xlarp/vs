@@ -1,34 +1,35 @@
 import { mono } from "@/pages/_app";
+import config from "@/static";
 import React from "react";
 
 const About: React.FC = () => {
   return (
     <div className="text-white md:p-20 p-14">
       <h1 className="text-6xl md:text-7xl font-bold mb-4 font-khula">
-        <span className="bg-gradient-to-r from-white to-custom-main text-transparent bg-clip-text">
-          Hi!
-        </span>
+        <span className="text-custom-main bg-clip-text">Hi!</span>
       </h1>
       <div className={mono.className}>
         <h2 className="text-xl md:text-lg mt-4 font-bold drop-shadow-lg shadow-black">
-          I{"'"}m 7fx, a software engineer from Canada.
+          I{"'"}m <span className="text-custom-main">7fx</span>, a software
+          engineer from Canada
         </h2>
-        <ul className="text-base md:text-lg mt-4 space-y-6">
+        <ul className="text-base md:text-lg mt-4 space-y-4">
           <li>
             <p className="text-white drop-shadow-lg shadow-black">
-              I started programming in 2019 and have since then developed a
-              passion for software development.
-            </p>
-            <p className="text-white drop-shadow-lg shadow-black">
-              I{"'"}ve worked on various projects, ranging from small scripts to
-              large-scale codebases.
+              I like software development{" "}
+              <span className="text-custom-main">and messing with APIs</span>
             </p>
           </li>
-          <li>
+          <li className="space-y-2">
             <p className="text-white drop-shadow-lg shadow-black">
-              I{"'"}m currently focusing on my college studies and working on
-              personal projects to further develop my skills in software
-              engineering.
+              <a
+                target="blank"
+                href={`https://discord.com/users/${config.socials.discord.id}`}
+                className="hover:underline text-custom-main font-semibold"
+              >
+                .fxx
+              </a>{" "}
+              on Discord
             </p>
           </li>
         </ul>

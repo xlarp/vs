@@ -1,5 +1,4 @@
 import { mono } from "@/pages/_app";
-import links from "@/static";
 import Link from "next/link";
 import React from "react";
 
@@ -20,8 +19,9 @@ const Header: React.FC = () => {
               <Link href="/about">About</Link>
             </li>
             <li className="text-white hover:text-custom-main cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-105">
-              <a href={links.socials.github}>GitHub</a>
+              <Link href="/skills">Skills</Link>
             </li>
+            -
           </ul>
         </nav>
       </header>

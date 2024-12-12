@@ -1,18 +1,14 @@
-import React from "react";
 import Bio from "@/components/Bio";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import StarryBackground from "@/components/Stars";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <div
-        className="flex flex-col items-start px-20 py-18 flex-grow bg-cover bg-center"
-        style={{
-          backgroundImage: 'url("/assets/bg.jpg")',
-        }}
-      >
+      <div className="flex flex-col items-start px-20 py-18 flex-grow bg-cover bg-center">
+        <StarryBackground />
         <Header />
 
         <div className="flex-grow relative pt-24">
