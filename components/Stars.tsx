@@ -1,14 +1,56 @@
 "use client";
 
 import React from "react";
-import _static from "@/static";
-import { useEffect, useRef } from "react";
+import staticAssets from "@/static";
+import { useEffect, useRef, useCallback } from "react";
 
-export default function StarryBackground() {
+const StarryBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
+  interface Star {
+    x: number;
+    y: number;
+    size: number;
+    speed: number;
+  }
+
+  const animate = useCallback(
+    (
+      ctx: CanvasRenderingContext2D,
+      stars: Star[],
+      canvas: HTMLCanvasElement
+    ) => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      stars.forEach((star) => {
+        const gradient = ctx.createRadialGradient(
+          star.x,
+          star.y,
+          0,
+          star.x,
+          star.y,
+          star.size
+        );
+        gradient.addColorStop(0, staticAssets.colors.purple);
+        gradient.addColorStop(1, staticAssets.colors.pink);
+
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+        star.y = (star.y + star.speed) % canvas.height;
+        star.x = (star.x + star.speed) % canvas.width;
+
+        star.y = (star.y + star.speed) % canvas.height;
+        ctx.fill();
+      });
+
+      requestAnimationFrame(() => animate(ctx, stars, canvas));
+    },
+    []
+  );
+
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current!;
     if (!canvas) return;
 
     const ctx = canvas.getContext("2d");
@@ -22,33 +64,17 @@ export default function StarryBackground() {
     setSize();
     window.addEventListener("resize", setSize);
 
-    // Create stars
     const stars = Array.from({ length: 100 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      size: Math.random() * 2,
+      size: Math.random() * 2.2,
       speed: Math.random() * 0.5,
     }));
 
-    // Animation loop
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = _static.colors.pink; // color for stars
-
-      stars.forEach((star) => {
-        ctx.beginPath();
-        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
-        ctx.fill();
-
-        star.y = (star.y + star.speed) % canvas.height;
-      });
-
-      requestAnimationFrame(animate);
-    };
-    animate();
+    animate(ctx, stars, canvas);
 
     return () => window.removeEventListener("resize", setSize);
-  }, []);
+  }, [animate]);
 
   return (
     <canvas
@@ -57,4 +83,6 @@ export default function StarryBackground() {
       style={{ background: "#111" }}
     />
   );
-}
+};
+
+export default StarryBackground;
