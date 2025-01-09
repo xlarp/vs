@@ -40,7 +40,7 @@ const About: React.FC = () => {
       </h1>
       <div className={mono.className}>
         <h2 className="text-xl md:text-lg mt-4 font-bold drop-shadow-lg shadow-black">
-          I{"'"}m <span className="text-custom-main">7fx</span>, a software
+          I{"'"}m <span className="text-custom-main">proto</span>, a software
           engineer from Canada
         </h2>
         <ul className="text-base md:text-lg mt-4 space-y-4">

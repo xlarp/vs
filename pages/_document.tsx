@@ -5,7 +5,10 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <title>7fx - throwing.lol</title>
+      <title>proto - throwing.lol</title>
+      <meta name="author" content="jolts" />
+      <link rel="icon" href="/favicon.ico" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="description" content="it's so over" />
       <meta name="theme-color" content={config.colors.pink} />
       <link rel="icon" href="/favicon.ico" />

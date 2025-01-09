@@ -1,13 +1,13 @@
 const config = {
   git: {
-    siteRepo: "https://github.com/devfxx/fxx",
+    siteRepo: "https://github.com/xlarp/vs",
     projects: {
       mail: "https://github.com/Team-Tritan/Disposable-Mail",
     },
   },
   socials: {
-    github: "https://github.com/devfxx",
-    email: "fxx@throwing.lol",
+    github: "https://github.com/xlarp",
+    email: "proto@throwing.lol",
     discord: {
       id: "423452508372074506",
     },
