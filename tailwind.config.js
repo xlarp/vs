@@ -13,7 +13,8 @@ module.exports = {
         mono: ["var(--font-mono)"],
       },
       colors: {
-        "custom-main": config.colors.pink,
+        "custom-blood": config.colors.pink,
+        "custom-fuchsia": config.colors.fuchsia,
         "custom-gray": "#161616",
       },
       textShadow: {

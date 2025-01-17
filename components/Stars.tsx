@@ -1,8 +1,7 @@
 "use client";
 
-import React from "react";
-import staticAssets from "@/static";
-import { useEffect, useRef, useCallback } from "react";
+import staticResources from "@/static";
+import React, { useCallback, useEffect, useRef } from "react";
 
 const StarryBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -31,8 +30,8 @@ const StarryBackground: React.FC = () => {
           star.y,
           star.size
         );
-        gradient.addColorStop(0, staticAssets.colors.purple);
-        gradient.addColorStop(1, staticAssets.colors.pink);
+        gradient.addColorStop(0, staticResources.colors.fuchsia);
+        gradient.addColorStop(1, staticResources.colors.pink);
 
         ctx.fillStyle = gradient;
         ctx.beginPath();
@@ -56,7 +55,6 @@ const StarryBackground: React.FC = () => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    // Set canvas size
     const setSize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;

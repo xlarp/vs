@@ -4,6 +4,9 @@ const config = {
     projects: {
       mail: "https://github.com/Team-Tritan/Disposable-Mail",
     },
+    pwngit: {
+      me: "https://jolts.f0rk.systems/",
+    },
   },
   socials: {
     github: "https://github.com/xlarp",
@@ -16,26 +19,31 @@ const config = {
     me: "https://throwing.lol/",
   },
   colors: {
-    purple: "#5000d0",
-    pink: "#e879f9",
+    fuchsia: "#ff91d7",
+    pink: "#ff17aa",
+  },
+  embers: {
+    color: "#ff17aa",
   },
   technical: {
     languages: [
       "JavaScript/TypeScript",
       "Python",
       "C#",
+      "C++",
       "Go",
-      "HTML/CSS",
       "Lua/LuaU",
+      "SQL",
+      "Perl",
     ],
     frameworks: [
-      "Cloudflare & Workers",
-      "AWS / DigitalOcean",
+      "Cloudflare",
+      "Oracle Cloud, AWS, Azure, GCP, DigitalOcean",
       "Roblox Studio",
       "Docker",
     ],
     additional: [
-      "Reverse Engineering .NET & C / C++",
+      "Reverse Engineering .NET, Go and C++",
       "OSINT & Reconnaissance",
     ],
   },
