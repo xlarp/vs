@@ -62,10 +62,10 @@ const About: React.FC = () => {
               I{"'"}m currently working at{" "}
               <a
                 target="blank"
-                href="https://www.riotgames.com/"
+                href="https://tritan.gg/"
                 className="hover:underline text-custom-blood font-semibold"
               >
-                Riot Games
+                Tritan Internet
               </a>
             </p>
           </li>
