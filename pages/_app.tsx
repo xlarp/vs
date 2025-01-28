@@ -1,4 +1,6 @@
-import React from "react";
+import EmberBackground from "@/components/Embers";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { JetBrains_Mono, Khula } from "next/font/google";
@@ -18,8 +20,17 @@ export const khula = Khula({
   preload: true,
 });
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+function App({ Component, pageProps }: AppProps) {
+  return (
+    <div className="flex flex-col min-h-screen overflow-hidden">
+      <EmberBackground />
+      <Header />
+      <main className="flex-grow">
+        <Component {...pageProps} />
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
-export default MyApp;
+export default App;
