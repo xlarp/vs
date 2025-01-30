@@ -1,6 +1,7 @@
 "use client";
 
 import { mono } from "@/pages/_app";
+import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
 const About: React.FC = () => {
@@ -33,18 +34,36 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <div className="text-white md:p-20 p-14">
-      <h1 className="text-6xl md:text-7xl font-bold mb-4 font-khula">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="text-white md:p-20 p-14"
+    >
+      <motion.h1
+        className="text-6xl md:text-7xl font-bold mb-4 font-khula"
+        whileHover={{ scale: 1.05 }}
+      >
         <span className="bg-gradient-to-r from-custom-main to-custom-secondary bg-clip-text text-transparent">
           Hi!
         </span>
-      </h1>
+      </motion.h1>
       <div className={mono.className}>
-        <h2 className="text-xl md:text-lg mt-4 font-bold drop-shadow-lg shadow-black">
+        <motion.h2
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3 }}
+          className="text-xl md:text-lg mt-4 font-bold drop-shadow-lg shadow-black"
+        >
           I{"'"}m <span className="text-custom-main">proto</span>, a software
           engineer from Canada
-        </h2>
-        <ul className="text-base md:text-lg mt-4 space-y-4">
+        </motion.h2>
+        <motion.ul
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+          className="text-base md:text-lg mt-4 space-y-4"
+        >
           <li>
             <p className="text-white drop-shadow-lg shadow-black">
               I {"<3"} software{" & "}
@@ -63,15 +82,15 @@ const About: React.FC = () => {
               <a
                 target="blank"
                 href="https://tritan.gg/"
-                className="hover:underline text-custom-main font-semibold"
+                className="hover:underline text-custom-main font-semibold transition-colors duration-300 hover:text-custom-secondary"
               >
                 Tritan Internet
               </a>
             </p>
           </li>
-        </ul>
+        </motion.ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
