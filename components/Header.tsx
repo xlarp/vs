@@ -12,13 +12,13 @@ const Header: React.FC = () => {
 
         <nav className="md:absolute right-0 pr-40">
           <ul className="flex flex-col md:flex-row space-y-4 md:pl-40 md:space-y-0 md:space-x-10 text-lg font-mono">
-            <li className="text-white hover:text-custom-blood cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-105">
+            <li className="text-white hover:text-custom-main cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-105">
               <Link href="/">Home</Link>
             </li>
-            <li className="text-white hover:text-custom-blood cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-105">
+            <li className="text-white hover:text-custom-main cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-105">
               <Link href="/about">About</Link>
             </li>
-            <li className="text-white hover:text-custom-blood cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-105">
+            <li className="text-white hover:text-custom-main cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-105">
               <Link href="/skills">Skills</Link>
             </li>
           </ul>

@@ -6,11 +6,11 @@ const Skills: React.FC = () => {
   return (
     <div className="text-white md:p-20 p-14">
       <h1 className="text-4xl md:text-5xl font-bold mb-4 font-khula">
-        <span className="text-custom-blood bg-clip-text">Technical Skills</span>
+        <span className="text-custom-main bg-clip-text">Technical Skills</span>
       </h1>
       <div className={mono.className}>
         <section>
-          <h2 className="text-xl md:text-lg mt-4 text-custom-blood font-bold drop-shadow-lg shadow-black">
+          <h2 className="text-xl md:text-lg mt-4 text-custom-main font-bold drop-shadow-lg shadow-black">
             Languages
           </h2>
           <ul className="text-base md:text-lg mt-4 space-y-2">
@@ -21,7 +21,7 @@ const Skills: React.FC = () => {
         </section>
 
         <section>
-          <h2 className="text-xl md:text-lg mt-8 text-custom-blood font-bold drop-shadow-lg shadow-black">
+          <h2 className="text-xl md:text-lg mt-8 text-custom-main font-bold drop-shadow-lg shadow-black">
             Frameworks & Tools
           </h2>
           <ul className="text-base md:text-lg mt-4 space-y-2">
@@ -32,7 +32,7 @@ const Skills: React.FC = () => {
         </section>
 
         <section>
-          <h2 className="text-xl md:text-lg mt-8 text-custom-blood font-bold drop-shadow-lg shadow-black">
+          <h2 className="text-xl md:text-lg mt-8 text-custom-main font-bold drop-shadow-lg shadow-black">
             Additional Skills
           </h2>
           <ul className="text-base md:text-lg mt-4 space-y-2">

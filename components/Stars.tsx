@@ -30,8 +30,8 @@ const StarryBackground: React.FC = () => {
           star.y,
           star.size
         );
-        gradient.addColorStop(0, staticResources.colors.fuchsia);
-        gradient.addColorStop(1, staticResources.colors.pink);
+        gradient.addColorStop(0, staticResources.colors.secondary);
+        gradient.addColorStop(1, staticResources.colors.main);
 
         ctx.fillStyle = gradient;
         ctx.beginPath();

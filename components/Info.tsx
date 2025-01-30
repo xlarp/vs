@@ -35,13 +35,13 @@ const About: React.FC = () => {
   return (
     <div className="text-white md:p-20 p-14">
       <h1 className="text-6xl md:text-7xl font-bold mb-4 font-khula">
-        <span className="bg-gradient-to-r from-custom-blood to-custom-fuchsia bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-custom-main to-custom-secondary bg-clip-text text-transparent">
           Hi!
         </span>
       </h1>
       <div className={mono.className}>
         <h2 className="text-xl md:text-lg mt-4 font-bold drop-shadow-lg shadow-black">
-          I{"'"}m <span className="text-custom-blood">proto</span>, a software
+          I{"'"}m <span className="text-custom-main">proto</span>, a software
           engineer from Canada
         </h2>
         <ul className="text-base md:text-lg mt-4 space-y-4">
@@ -49,7 +49,7 @@ const About: React.FC = () => {
             <p className="text-white drop-shadow-lg shadow-black">
               I {"<3"} software{" & "}
               <span
-                className={`text-custom-blood transition-opacity duration-500 ${
+                className={`text-custom-main transition-opacity duration-500 ${
                   isVisible ? "opacity-100" : "opacity-0"
                 }`}
               >
@@ -63,7 +63,7 @@ const About: React.FC = () => {
               <a
                 target="blank"
                 href="https://tritan.gg/"
-                className="hover:underline text-custom-blood font-semibold"
+                className="hover:underline text-custom-main font-semibold"
               >
                 Tritan Internet
               </a>

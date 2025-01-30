@@ -19,8 +19,8 @@ const config = {
     me: "https://throwing.lol/",
   },
   colors: {
-    fuchsia: "#ff91d7",
-    pink: "#ff17aa",
+    main: "#ff17aa",
+    secondary: "#ff91d7",
   },
   embers: {
     color: "#ff17aa",
