@@ -10,7 +10,7 @@ export default function Document() {
         <meta name="description" content="it's so over" />
         <meta name="theme-color" content={config.colors.main} />
       </Head>
-      <body className="bg-[#1b1b1b]">
+      <body className="bg-[#000000]">
         <Main />
         <NextScript />
       </body>
