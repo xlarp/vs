@@ -4,15 +4,13 @@ import { Head, Html, Main, NextScript } from "next/document";
 export default function Document() {
   return (
     <Html lang="en">
-      <Head />
-      <title>proto - throwing.lol</title>
-      <meta name="author" content="jolts" />
-      <link rel="icon" href="/favicon.ico" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="it's so over" />
-      <meta name="theme-color" content={config.colors.main} />
-      <link rel="icon" href="/favicon.ico" />
-      <body>
+      <Head>
+        <meta name="author" content="jolts" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="it's so over" />
+        <meta name="theme-color" content={config.colors.main} />
+      </Head>
+      <body className="bg-[#1b1b1b]">
         <Main />
         <NextScript />
       </body>
