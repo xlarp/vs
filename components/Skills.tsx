@@ -1,9 +1,8 @@
 import { mono } from "@/pages/_app";
 import config from "@/static";
 import { motion } from "framer-motion";
-import React from "react";
 
-const Skills: React.FC = () => {
+function Skills() {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -89,6 +88,6 @@ const Skills: React.FC = () => {
       </div>
     </motion.div>
   );
-};
+}
 
 export default Skills;

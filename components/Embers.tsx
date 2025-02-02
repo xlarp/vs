@@ -1,7 +1,7 @@
 import staticAssets from "@/static";
 import { useCallback, useEffect, useRef } from "react";
 
-const EmberBackground = () => {
+function EmberBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   interface Ember {
@@ -115,6 +115,6 @@ const EmberBackground = () => {
       style={{ background: "#111" }}
     />
   );
-};
+}
 
 export default EmberBackground;

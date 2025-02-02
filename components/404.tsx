@@ -1,8 +1,7 @@
 import { mono } from "@/pages/_app";
 import { motion } from "framer-motion";
-import React from "react";
 
-const NotFound: React.FC = () => {
+function NotFound() {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -39,6 +38,6 @@ const NotFound: React.FC = () => {
       </div>
     </motion.div>
   );
-};
+}
 
 export default NotFound;

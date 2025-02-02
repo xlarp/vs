@@ -2,9 +2,9 @@
 
 import { mono } from "@/pages/_app";
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-const About: React.FC = () => {
+function About() {
   const phrases = [
     "building things",
     "problem solving",
@@ -92,6 +92,6 @@ const About: React.FC = () => {
       </div>
     </motion.div>
   );
-};
+}
 
 export default About;

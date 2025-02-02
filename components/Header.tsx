@@ -1,8 +1,7 @@
 import { mono } from "@/pages/_app";
 import Link from "next/link";
-import React from "react";
 
-const Header: React.FC = () => {
+function Header() {
   return (
     <div className={mono.className}>
       <header className="flex flex-col md:flex-row justify-center md:justify-between items-center p-4 relative md:fixed text-white mt-8 w-full z-30 top-0 md:right-0 md:pr-60">
@@ -26,6 +25,6 @@ const Header: React.FC = () => {
       </header>
     </div>
   );
-};
+}
 
 export default Header;
