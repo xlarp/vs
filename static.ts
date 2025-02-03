@@ -1,4 +1,4 @@
-const config = {
+export default {
   git: {
     siteRepo: "https://github.com/xlarp/vs",
     projects: {
@@ -13,6 +13,7 @@ const config = {
     email: "proto@throwing.lol",
     discord: {
       id: "423452508372074506",
+      name: ".fxx",
     },
   },
   sites: {
@@ -22,7 +23,7 @@ const config = {
     main: "#ff17aa",
     secondary: "#ff91d7",
   },
-  embers: {
+  background: {
     color: "#ff17aa",
   },
   technical: {
@@ -47,6 +48,4 @@ const config = {
       "OSINT & Reconnaissance",
     ],
   },
-};
-
-export default config;
+} as const;

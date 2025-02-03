@@ -4,10 +4,16 @@ import EmailIcon from "@/public/assets/email.svg";
 import GithubIcon from "@/public/assets/github.svg";
 import PwnIcon from "@/public/assets/pwn.svg";
 import _static from "@/static";
+import { motion } from "framer-motion"; // added import
 
 export function Footer() {
   return (
-    <footer className="text-white py-12 px-8 md:px-0">
+    <motion.footer
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="text-white py-12 px-8 md:px-0"
+    >
       <div className="container mx-auto flex flex-col md:flex-row justify-between">
         <div className="text-2xl mb-4 font-mono">
           <div className={mono.className}>
@@ -66,7 +72,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
 

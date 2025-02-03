@@ -1,4 +1,4 @@
-import staticAssets from "@/static";
+import resources from "@/static";
 import { useCallback, useEffect, useRef } from "react";
 
 function EmberBackground() {
@@ -29,7 +29,7 @@ function EmberBackground() {
     ) => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      const emberRGB = hexToRGB(staticAssets.embers.color);
+      const emberRGB = hexToRGB(resources.background.color);
 
       embers.forEach((ember) => {
         ember.opacity += ember.flickerSpeed * ember.flickerDirection;

@@ -1,4 +1,4 @@
-import config from "./static";
+import resources from "./static";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -13,8 +13,8 @@ module.exports = {
         mono: ["var(--font-mono)"],
       },
       colors: {
-        "custom-main": config.colors.main,
-        "custom-secondary": config.colors.secondary,
+        "custom-main": resources.colors.main,
+        "custom-secondary": resources.colors.secondary,
         "custom-gray": "#161616",
       },
       textShadow: {

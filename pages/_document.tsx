@@ -1,4 +1,4 @@
-import config from "@/static";
+import resources from "@/static";
 import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -8,7 +8,7 @@ export default function Document() {
         <meta name="author" content="jolts" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="it's so over" />
-        <meta name="theme-color" content={config.colors.main} />
+        <meta name="theme-color" content={resources.colors.main} />
       </Head>
       <body className="bg-[#000000]">
         <Main />

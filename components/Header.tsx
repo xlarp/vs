@@ -1,10 +1,16 @@
 import { mono } from "@/pages/_app";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 function Header() {
   return (
     <div className={mono.className}>
-      <header className="flex flex-col md:flex-row justify-center md:justify-between items-center p-4 relative md:fixed text-white mt-8 w-full z-30 top-0 md:right-0 md:pr-60">
+      <motion.header
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col md:flex-row justify-center md:justify-between items-center p-4 relative md:fixed text-white mt-8 w-full z-30 top-0 md:right-0 md:pr-60"
+      >
         <div className="font-mono text-lg md:text-xl tracking-widest mb-4 md:mb-0 absolute w-full text-center md:relative md:text-left left-0 pl-40">
           throwing.lol
         </div>
@@ -22,7 +28,7 @@ function Header() {
             </li>
           </ul>
         </nav>
-      </header>
+      </motion.header>
     </div>
   );
 }
