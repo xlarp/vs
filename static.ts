@@ -20,11 +20,11 @@ export default {
     me: "https://throwing.lol/",
   },
   colors: {
-    main: "#ff17aa",
-    secondary: "#ff91d7",
+    main: "#bb72ff",
+    secondary: "#a684f7",
   },
   background: {
-    color: "#ff17aa",
+    color: "#b769ff",
   },
   technical: {
     languages: [
