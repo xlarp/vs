@@ -82,7 +82,7 @@ function About() {
             <span className="text-custom-main font-semibold transition-colors duration-300 hover:text-pink-300">
               Tritan Internet (AS393577)
             </span>{" "}
-            &mdash; DevOps, Backend, & Security Engineering.
+            &mdash; DevOps, Backend, & Security Engineering
           </motion.p>
         </motion.section>
         <motion.section className="mb-6">
@@ -100,8 +100,8 @@ function About() {
             transition={{ delay: 0.4 }}
             className="mt-2 text-base md:text-lg"
           >
-            I love collaborating on innovative development projects and creating
-            secure digital solutions.
+            I love collaborating on development projects and crafting secure
+            solutions
           </motion.p>
         </motion.section>
         <GitHubProjects />
