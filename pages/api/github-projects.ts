@@ -11,6 +11,7 @@ interface Repo {
   owner: { login: string; type: string };
 }
 
+let cachedRepos: Repo[] | null = null;
 const sources = [
   { name: "xlarp", isOrg: false },
   { name: "xvht", isOrg: true },
@@ -54,8 +55,11 @@ async function fetchReposFromGitHub(): Promise<Repo[]> {
 }
 
 export default async function handler() {
+  if (cachedRepos) return NextResponse.json(cachedRepos);
+
   try {
     const repos = await fetchReposFromGitHub();
+    cachedRepos = repos;
     return NextResponse.json(repos);
   } catch (error) {
     console.error(error);
