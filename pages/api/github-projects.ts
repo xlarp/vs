@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 
 export const runtime = "edge";
 
@@ -11,7 +11,6 @@ interface Repo {
   owner: { login: string; type: string };
 }
 
-let cachedRepos: Repo[] | null = null;
 const sources = [
   { name: "xlarp", isOrg: false },
   { name: "xvht", isOrg: true },
@@ -54,17 +53,15 @@ async function fetchReposFromGitHub(): Promise<Repo[]> {
   }
 }
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (cachedRepos) return res.status(200).json(cachedRepos);
+export default async function handler() {
   try {
     const repos = await fetchReposFromGitHub();
-    cachedRepos = repos;
-    return res.status(200).json(repos);
+    return NextResponse.json(repos);
   } catch (error) {
     console.error(error);
-    return res.status(500).json({ error: "Failed to fetch repositories" });
+    return NextResponse.json(
+      { error: "Failed to fetch GitHub projects" },
+      { status: 500 }
+    );
   }
 }
