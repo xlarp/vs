@@ -61,7 +61,7 @@ function About() {
             transition={{ delay: 0.4 }}
             className="mt-2 text-base md:text-lg"
           >
-            I'm 17, from Toronto, Canada.
+            I'm 17, from Toronto, Canada
           </motion.p>
         </motion.section>
         <motion.section className="mb-6">
