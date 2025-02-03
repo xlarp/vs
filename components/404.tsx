@@ -13,7 +13,7 @@ function NotFound() {
         className="text-6xl md:text-7xl font-bold mb-4 font-khula"
         whileHover={{ scale: 1.05 }}
       >
-        <span className="bg-gradient-to-r from-purple-400 to-custom-main text-transparent bg-clip-text">
+        <span className="bg-gradient-to-r from-custom-main to-custom-secondary text-transparent bg-clip-text">
           404
         </span>
       </motion.h1>

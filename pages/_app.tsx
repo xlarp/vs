@@ -46,6 +46,20 @@ function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>proto - throwing.lol</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="it's so over" />
+
+        {/* Open Graph / Discord metadata */}
+        <meta property="og:title" content="proto - throwing.lol" />
+        <meta property="og:description" content="it's so over" />
+        <meta property="og:image" content="/bg/stars.jpg" />
+        <meta property="og:url" content="https://throwing.lol" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter metadata */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="proto - throwing.lol" />
+        <meta name="twitter:description" content="it's so over" />
+        <meta name="twitter:image" content="/bg/stars.jpg" />
       </Head>
       {/* <EmberBackground /> */}
       <ShootingStarsBackground />

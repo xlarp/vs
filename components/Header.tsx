@@ -1,4 +1,5 @@
 import { mono } from "@/pages/_app";
+import Bio from "@/components/Bio";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -9,7 +10,7 @@ function Header() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="flex flex-col md:flex-row justify-center md:justify-between items-center p-4 relative md:fixed text-white mt-8 w-full z-30 top-0 md:right-0 md:pr-60"
+        className="flex flex-col md:flex-row justify-center md:justify-between items-center p-4 relative md:relative text-white mt-8 w-full z-30 top-0 md:right-0 md:pr-60"
       >
         <div className="font-mono text-lg md:text-xl tracking-widest mb-4 md:mb-0 absolute w-full text-center md:relative md:text-left left-0 pl-40">
           throwing.lol
