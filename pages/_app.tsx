@@ -7,6 +7,29 @@ import { JetBrains_Mono, Khula } from "next/font/google";
 import Head from "next/head";
 import { useEffect } from "react";
 
+const viewport = {
+  viewport: "width=device-width, initial-scale=1.0",
+};
+
+const metaDescription = {
+  description: "it's so over",
+};
+
+const openGraph = {
+  title: "proto - throwing.lol",
+  description: "it's so over",
+  image: "/assets/stars.png",
+  url: "https://throwing.lol",
+  type: "website",
+};
+
+const twitter = {
+  card: "summary_large_image",
+  title: "proto - throwing.lol",
+  description: "it's so over",
+  image: "/bg/stars.jpg",
+};
+
 export const mono = JetBrains_Mono({
   subsets: ["latin"],
   display: "swap",
@@ -44,24 +67,23 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
       <Head>
-        <title>proto - throwing.lol</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="it's so over" />
+        <title>{openGraph.title}</title>
+        <meta name="viewport" content={viewport.viewport} />
+        <meta name="description" content={metaDescription.description} />
 
-        {/* Open Graph / Discord metadata */}
-        <meta property="og:title" content="proto - throwing.lol" />
-        <meta property="og:description" content="it's so over" />
-        <meta property="og:image" content="/bg/stars.jpg" />
-        <meta property="og:url" content="https://throwing.lol" />
-        <meta property="og:type" content="website" />
+        {/* Open Graph / Discord */}
+        <meta property="og:title" content={openGraph.title} />
+        <meta property="og:description" content={openGraph.description} />
+        <meta property="og:image" content={openGraph.image} />
+        <meta property="og:url" content={openGraph.url} />
+        <meta property="og:type" content={openGraph.type} />
 
-        {/* Twitter metadata */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="proto - throwing.lol" />
-        <meta name="twitter:description" content="it's so over" />
-        <meta name="twitter:image" content="/bg/stars.jpg" />
+        {/* Twitter */}
+        <meta name="twitter:card" content={twitter.card} />
+        <meta name="twitter:title" content={twitter.title} />
+        <meta name="twitter:description" content={twitter.description} />
+        <meta name="twitter:image" content={twitter.image} />
       </Head>
-      {/* <EmberBackground /> */}
       <ShootingStarsBackground />
       <Header />
       <main className="flex-grow">
