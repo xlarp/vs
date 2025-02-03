@@ -1,5 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
+export const runtime = "edge";
+
 interface Repo {
   id: number;
   name: string;
