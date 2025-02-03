@@ -5,7 +5,6 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { JetBrains_Mono, Khula } from "next/font/google";
 import Head from "next/head";
-import { useEffect } from "react";
 
 const viewport = {
   viewport: "width=device-width, initial-scale=1.0",
@@ -18,7 +17,6 @@ const metaDescription = {
 const openGraph = {
   title: "proto - throwing.lol",
   description: "it's so over",
-  image: "/assets/stars.png",
   url: "https://throwing.lol",
   type: "website",
 };
@@ -27,7 +25,6 @@ const twitter = {
   card: "summary_large_image",
   title: "proto - throwing.lol",
   description: "it's so over",
-  image: "/bg/stars.png",
 };
 
 export const mono = JetBrains_Mono({
@@ -46,24 +43,6 @@ export const khula = Khula({
 });
 
 function App({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker
-          .register("/sw.js")
-          .then((registration) => {
-            console.log(
-              "ServiceWorker registration successful with scope: ",
-              registration.scope
-            );
-          })
-          .catch((error) => {
-            console.error("ServiceWorker registration failed: ", error);
-          });
-      });
-    }
-  }, []);
-
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
       <Head>
@@ -74,7 +53,6 @@ function App({ Component, pageProps }: AppProps) {
         {/* Open Graph / Discord */}
         <meta property="og:title" content={openGraph.title} />
         <meta property="og:description" content={openGraph.description} />
-        <meta property="og:image" content={openGraph.image} />
         <meta property="og:url" content={openGraph.url} />
         <meta property="og:type" content={openGraph.type} />
 
@@ -82,7 +60,6 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:card" content={twitter.card} />
         <meta name="twitter:title" content={twitter.title} />
         <meta name="twitter:description" content={twitter.description} />
-        <meta name="twitter:image" content={twitter.image} />
       </Head>
       <ShootingStarsBackground />
       <Header />

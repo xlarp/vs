@@ -1,74 +1,91 @@
 import { mono } from "@/pages/_app";
-import DiscordIcon from "@/public/assets/discord.svg";
-import EmailIcon from "@/public/assets/email.svg";
-import GithubIcon from "@/public/assets/github.svg";
-import PwnIcon from "@/public/assets/pwn.svg";
-import _static from "@/static";
-import { motion } from "framer-motion"; // added import
+import resources from "@/static";
+import { motion } from "framer-motion";
+import { AtSignIcon, GitForkIcon, GithubIcon, MailIcon } from "lucide-react";
 
 export function Footer() {
   return (
     <motion.footer
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className="text-white py-12 px-8 md:px-0"
     >
       <div className="container mx-auto flex flex-col md:flex-row justify-between">
         <div className="text-2xl mb-4 font-mono">
           <div className={mono.className}>
-            <div className="transition-all duration-500 ease-in-out transform hover:scale-105 text-white hover:text-custom-main mb-1">
-              <a href={_static.sites.me}>throwing.lol</a>
-            </div>
-            <div className="text-sm transition-all duration-500 ease-in-out transform hover:scale-105 text-white/70 hover:text-custom-main mb-4 md:mb-0">
-              <a href={_static.git.siteRepo}>src/</a>
-            </div>
+            <motion.div
+              whileHover={{ scale: 1.05, color: resources.colors.main }}
+              transition={{ duration: 0.2 }}
+              className="text-white mb-1"
+            >
+              <a href={resources.sites.me}>throwing.lol</a>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05, color: resources.colors.main }}
+              transition={{ duration: 0.2 }}
+              className="text-sm text-white/70 mb-4 md:mb-0"
+            >
+              <a href={resources.git.siteRepo}>src/</a>
+            </motion.div>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-16">
           <div>
-            <div className="font-medium mb-4 flex items-center space-x-2 transition-all duration-500 ease-in-out transform hover:scale-105 text-white hover:text-custom-main">
+            <motion.div
+              whileHover={{ scale: 1.05, color: resources.colors.main }}
+              transition={{ duration: 0.2 }}
+              className="font-medium mb-4 flex items-center space-x-2 text-white"
+            >
               <GithubIcon className="h-5 w-5" />
               <span>
-                <a target="_blank" href={_static.socials.github}>
-                  xlarp
+                <a target="_blank" href={resources.socials.github}>
+                  GitHub
                 </a>
               </span>
-            </div>
+            </motion.div>
 
-            <div className="font-medium flex items-center space-x-2 transition-all duration-500 ease-in-out transform hover:scale-105 text-white hover:text-custom-main">
-              <EmailIcon className="h-5 w-5" />
+            <motion.div
+              whileHover={{ scale: 1.05, color: resources.colors.main }}
+              transition={{ duration: 0.2 }}
+              className="font-medium flex items-center space-x-2 text-white"
+            >
+              <GitForkIcon className="h-5 w-5" />
               <span>
-                <a target="_blank" href={`mailto:${_static.socials.email}`}>
-                  contact
+                <a target="_blank" href={resources.git.pwngit.me}>
+                  PwnGit
                 </a>
               </span>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-16">
-            <div>
-              <div className="font-medium mb-4 flex items-center space-x-2 transition-all duration-500 ease-in-out transform hover:scale-105 text-white hover:text-custom-main">
-                <PwnIcon className="h-5 w-5" />
-                <span>
-                  <a target="_blank" href={_static.git.pwngit.me}>
-                    jolts
-                  </a>
-                </span>
-              </div>
-              <div className="font-medium flex items-center space-x-2 transition-all duration-500 ease-in-out transform hover:scale-105 text-white hover:text-custom-main">
-                <DiscordIcon className="h-5 w-5" />
-                <span>
-                  <a
-                    target="_blank"
-                    href={`https://discord.com/users/${_static.socials.discord.id}`}
-                  >
-                    discord
-                  </a>
-                </span>
-              </div>
-            </div>
+          <div>
+            <motion.div
+              whileHover={{ scale: 1.05, color: resources.colors.main }}
+              transition={{ duration: 0.2 }}
+              className="font-medium mb-4 flex items-center space-x-2 text-white"
+            >
+              <AtSignIcon className="h-5 w-5" />
+              <span>
+                <a target="_blank" href={resources.socials.matrix}>
+                  Matrix
+                </a>
+              </span>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05, color: resources.colors.main }}
+              transition={{ duration: 0.2 }}
+              className="font-medium flex items-center space-x-2 text-white"
+            >
+              <MailIcon className="h-5 w-5" />
+              <span>
+                <a target="_blank" href={`mailto:${resources.socials.email}`}>
+                  Contact
+                </a>
+              </span>
+            </motion.div>
           </div>
         </div>
       </div>

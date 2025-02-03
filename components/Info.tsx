@@ -1,6 +1,6 @@
 "use client";
 
-import GitHubProjects from "@/components/GitHubProjects";
+import Projects from "@/components/GitHubProjects";
 import { mono } from "@/pages/_app";
 import resources from "@/static";
 import { motion } from "framer-motion";
@@ -10,11 +10,10 @@ function About() {
   const phrases = [
     "building things",
     "problem solving",
-    "open source",
     "experimenting",
-    "reversing",
+    "reversing malware",
     "automating",
-    "breaking things",
+    "breaking things (sometimes)",
   ];
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
   const [isVisible, setIsVisible] = useState(true);
@@ -104,7 +103,9 @@ function About() {
             solutions
           </motion.p>
         </motion.section>
-        <GitHubProjects />
+
+        <Projects />
+
         <motion.section className="mb-6">
           <motion.h2
             initial={{ opacity: 0, x: -20 }}

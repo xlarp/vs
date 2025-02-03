@@ -15,16 +15,17 @@ export default {
       id: "423452508372074506",
       name: ".fxx",
     },
+    matrix: "https://matrix.to/#/@uuid:xmr.se",
   },
   sites: {
     me: "https://throwing.lol/",
   },
   colors: {
-    main: "#bb72ff",
-    secondary: "#a684f7",
+    main: "#8772ff",
+    secondary: "#84a8f7",
   },
   background: {
-    color: "#b769ff",
+    color: "#8772ff",
   },
   technical: {
     languages: [

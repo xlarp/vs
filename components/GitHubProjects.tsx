@@ -11,11 +11,11 @@ interface Repo {
   html_url: string;
 }
 
-function GitHubProjects() {
+function Projects() {
   const [repos, setRepos] = useState<Repo[]>([]);
 
   useEffect(() => {
-    fetch("/api/github-projects")
+    fetch("/api/projects")
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {
@@ -69,4 +69,4 @@ function GitHubProjects() {
   );
 }
 
-export default GitHubProjects;
+export default Projects;
