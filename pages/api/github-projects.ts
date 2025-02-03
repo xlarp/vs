@@ -1,7 +1,3 @@
-import { NextResponse } from "next/server";
-
-export const runtime = "edge";
-
 interface Repo {
   id: number;
   name: string;
@@ -54,18 +50,28 @@ async function fetchReposFromGitHub(): Promise<Repo[]> {
   }
 }
 
+export const runtime = "edge";
+
 export default async function handler() {
-  if (cachedRepos) return NextResponse.json(cachedRepos);
+  if (cachedRepos)
+    return new Response(JSON.stringify(cachedRepos), {
+      headers: { "content-type": "application/json" },
+    });
 
   try {
     const repos = await fetchReposFromGitHub();
     cachedRepos = repos;
-    return NextResponse.json(repos);
+    return new Response(JSON.stringify(repos), {
+      headers: { "content-type": "application/json" },
+    });
   } catch (error) {
     console.error(error);
-    return NextResponse.json(
-      { error: "Failed to fetch GitHub projects" },
-      { status: 500 }
+    return new Response(
+      JSON.stringify({ error: "Failed to fetch GitHub projects" }),
+      {
+        status: 500,
+        headers: { "content-type": "application/json" },
+      }
     );
   }
 }
