@@ -1,24 +1,27 @@
 export default {
-  git: {
+  work: [
+    {
+      title: "Tritan Internet",
+      role: "DevOps, Backend, & Security Engineering",
+      site: "https://tritan.gg",
+    },
+  ],
+  default: {
+    domain: "throwing.lol",
     siteRepo: "https://github.com/xlarp/vs",
-    projects: {
-      mail: "https://github.com/Team-Tritan/Disposable-Mail",
-    },
-    pwngit: {
-      me: "https://jolts.f0rk.systems/",
-    },
   },
   socials: {
+    pwngit: "https://jolts.f0rk.systems",
     github: "https://github.com/xlarp",
+
     email: "proto@throwing.lol",
     discord: {
       id: "423452508372074506",
       name: ".fxx",
     },
+
     matrix: "https://matrix.to/#/@uuid:xmr.se",
-  },
-  sites: {
-    me: "https://throwing.lol/",
+    pgp: "/pgp.txt",
   },
   colors: {
     main: "#8772ff",

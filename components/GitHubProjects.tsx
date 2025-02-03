@@ -45,24 +45,31 @@ function Projects() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
-        className="mt-2 space-y-4 list-disc ml-6"
+        className="mt-2 space-y-4 list-none ml-0"
       >
-        {repos.map((repo) => (
-          <li key={repo.id} className="text-base md:text-lg text-white">
+        {repos.map((repo, index) => (
+          <motion.li
+            key={repo.id}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 + index * 0.2 }}
+            className="text-base md:text-lg text-white grid grid-cols-[220px_1fr] gap-2"
+          >
             <a
               href={repo.html_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-custom-main hover:underline"
+              className="font-semibold text-custom-main transition-all duration-300 hover:text-custom-secondary hover:decoration-custom-secondary hover:underline hover:underline-offset-4 decoration-transparent underline underline-offset-4"
             >
               {repo.name}
             </a>
-            {" - "}
-            {repo.description || "No description"}
-            {repo.name.toLowerCase() === "vs" && (
-              <span className="italic"> (This site)</span>
-            )}
-          </li>
+            <span>
+              {repo.description || "No description"}
+              {repo.name.toLowerCase() === "vs" && (
+                <span className="italic"> (This site)</span>
+              )}
+            </span>
+          </motion.li>
         ))}
       </motion.ul>
     </motion.section>

@@ -72,36 +72,26 @@ function About() {
           >
             Work
           </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="mt-2 text-base md:text-lg"
-          >
-            <span className="text-custom-main font-semibold transition-colors duration-300 hover:text-pink-300">
-              Tritan Internet (AS393577)
-            </span>{" "}
-            &mdash; DevOps, Backend, & Security Engineering
-          </motion.p>
-        </motion.section>
-        <motion.section className="mb-6">
-          <motion.h2
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-xl md:text-2xl font-bold inline-block bg-gradient-to-r from-custom-main to-custom-secondary bg-clip-text text-transparent drop-shadow-lg shadow-black"
-          >
-            Passion
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="mt-2 text-base md:text-lg"
-          >
-            I love collaborating on development projects and crafting secure
-            solutions
-          </motion.p>
+          <div className="mt-2 space-y-4">
+            {resources.work.map((work, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 + index * 0.2 }}
+                className="text-base md:text-lg grid grid-cols-[220px_1fr] gap-2"
+              >
+                <a
+                  className="text-custom-main font-semibold transition-all duration-300 hover:text-custom-secondary hover:decoration-custom-secondary hover:underline hover:underline-offset-4 decoration-transparent underline underline-offset-4"
+                  href={work.site}
+                  target="_blank"
+                >
+                  {work.title}
+                </a>
+                <span>{work.role}</span>
+              </motion.div>
+            ))}
+          </div>
         </motion.section>
 
         <Projects />
@@ -123,7 +113,7 @@ function About() {
           >
             Discord:{" "}
             <a
-              className="font-bold text-custom-main"
+              className="font-bold text-custom-main transition-all duration-300 hover:text-custom-secondary hover:decoration-custom-secondary hover:underline hover:underline-offset-4 decoration-transparent underline underline-offset-4"
               href={`https://discord.com/users/${resources.socials.discord.id}`}
             >
               {resources.socials.discord.name}
@@ -138,7 +128,7 @@ function About() {
             Email:{" "}
             <a
               href={`mailto:${resources.socials.email}`}
-              className="font-bold text-custom-main"
+              className="font-bold text-custom-main transition-all duration-300 hover:text-custom-secondary hover:decoration-custom-secondary hover:underline hover:underline-offset-4 decoration-transparent underline underline-offset-4"
             >
               {resources.socials.email}
             </a>

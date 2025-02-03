@@ -1,7 +1,7 @@
 import { mono } from "@/pages/_app";
 import resources from "@/static";
 import { motion } from "framer-motion";
-import { AtSignIcon, GitForkIcon, GithubIcon, MailIcon } from "lucide-react";
+import { AtSignIcon, GitForkIcon, GithubIcon, KeyIcon } from "lucide-react";
 
 export function Footer() {
   return (
@@ -11,22 +11,24 @@ export function Footer() {
       transition={{ duration: 0.5 }}
       className="text-white py-12 px-8 md:px-0"
     >
-      <div className="container mx-auto flex flex-col md:flex-row justify-between">
-        <div className="text-2xl mb-4 font-mono">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center md:items-start">
+        <div className="text-2xl mb-4 font-mono text-center md:text-left">
           <div className={mono.className}>
             <motion.div
               whileHover={{ scale: 1.05, color: resources.colors.main }}
               transition={{ duration: 0.2 }}
               className="text-white mb-1"
             >
-              <a href={resources.sites.me}>throwing.lol</a>
+              <a href={`//${resources.default.domain}`}>
+                {resources.default.domain}
+              </a>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.05, color: resources.colors.main }}
               transition={{ duration: 0.2 }}
               className="text-sm text-white/70 mb-4 md:mb-0"
             >
-              <a href={resources.git.siteRepo}>src/</a>
+              <a href={resources.default.siteRepo}>src/</a>
             </motion.div>
           </div>
         </div>
@@ -53,7 +55,7 @@ export function Footer() {
             >
               <GitForkIcon className="h-5 w-5" />
               <span>
-                <a target="_blank" href={resources.git.pwngit.me}>
+                <a target="_blank" href={resources.socials.pwngit}>
                   PwnGit
                 </a>
               </span>
@@ -64,7 +66,7 @@ export function Footer() {
             <motion.div
               whileHover={{ scale: 1.05, color: resources.colors.main }}
               transition={{ duration: 0.2 }}
-              className="font-medium mb-4 flex items-center space-x-2 text-white"
+              className="font-medium flex mb-4 items-center space-x-2 text-white"
             >
               <AtSignIcon className="h-5 w-5" />
               <span>
@@ -79,10 +81,10 @@ export function Footer() {
               transition={{ duration: 0.2 }}
               className="font-medium flex items-center space-x-2 text-white"
             >
-              <MailIcon className="h-5 w-5" />
+              <KeyIcon className="h-5 w-5" />
               <span>
-                <a target="_blank" href={`mailto:${resources.socials.email}`}>
-                  Contact
+                <a target="_blank" href={resources.socials.pgp}>
+                  PGP Key
                 </a>
               </span>
             </motion.div>
