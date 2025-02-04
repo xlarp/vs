@@ -20,7 +20,7 @@ export default {
       name: ".fxx",
     },
 
-    matrix: "https://matrix.to/#/@uuid:xmr.se",
+    matrix: "https://matrix.to/#/@uuid:matrix.xvh.lol",
     pgp: "/pgp.txt",
   },
   colors: {
