@@ -1,32 +1,7 @@
-"use client";
-
+import { Repo } from "@/typings/repos";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
-interface Repo {
-  id: number;
-  name: string;
-  description: string;
-  fork: boolean;
-  html_url: string;
-}
-
-function Projects() {
-  const [repos, setRepos] = useState<Repo[]>([]);
-
-  useEffect(() => {
-    fetch("/api/projects")
-      .then((res) => res.json())
-      .then((data) => {
-        if (Array.isArray(data)) {
-          setRepos(data);
-        } else {
-          setRepos([]);
-        }
-      })
-      .catch(console.error);
-  }, []);
-
+function Projects({ repos }: { repos: Repo[] }) {
   if (!Array.isArray(repos) || repos.length === 0) {
     return null;
   }

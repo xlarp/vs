@@ -1,12 +1,13 @@
 "use client";
 
-import Projects from "@/components/GitHubProjects";
 import { mono } from "@/pages/_app";
 import resources from "@/static";
+import { Repo } from "@/typings/repos";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Projects from "./GitHubProjects";
 
-function About() {
+function About({ repos }: { repos: Repo[] }) {
   const phrases = [
     "building things",
     "problem solving",
@@ -94,7 +95,7 @@ function About() {
           </div>
         </motion.section>
 
-        <Projects />
+        <Projects repos={repos} />
 
         <motion.section className="mb-6">
           <motion.h2

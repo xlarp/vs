@@ -1,23 +1,14 @@
+import { Repo } from "@/typings/repos";
 import { NextResponse } from "next/server";
 
 export const runtime = "edge";
 
-interface Repo {
-  id: number;
-  name: string;
-  description: string;
-  fork: boolean;
-  html_url: string;
-  owner: { login: string; type: string };
-}
-
-let cachedRepos: Repo[] | null = null;
 const sources = [
   { name: "xlarp", isOrg: false },
   { name: "xvht", isOrg: true },
 ];
 
-async function fetchReposFromGitHub(): Promise<Repo[]> {
+export async function fetchReposFromGitHub(): Promise<Repo[]> {
   try {
     const fetches = sources.map((source) => {
       const url = source.isOrg
@@ -54,20 +45,7 @@ async function fetchReposFromGitHub(): Promise<Repo[]> {
   }
 }
 
-export default async function handler() {
-  if (cachedRepos) return NextResponse.json(cachedRepos);
-
-  try {
-    const repos = await fetchReposFromGitHub();
-    cachedRepos = repos;
-    return NextResponse.json(repos);
-  } catch (error) {
-    console.error(error);
-    return NextResponse.json(
-      { error: "Failed to fetch GitHub projects" },
-      {
-        status: 500,
-      }
-    );
-  }
+export default async function GET() {
+  const fetchedRepos = await fetchReposFromGitHub();
+  return NextResponse.json(fetchedRepos);
 }
