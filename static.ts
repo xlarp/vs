@@ -5,13 +5,18 @@ export default {
       role: "DevOps, Backend, & Security Engineering",
       site: "https://tritan.gg",
     },
+    {
+      title: "0days Development",
+      role: "Microservices & Backend Development",
+      site: "https://0days.lol",
+    },
   ],
   default: {
     domain: "throwing.lol",
     siteRepo: "https://github.com/xlarp/vs",
   },
   socials: {
-    pwngit: "https://jolts.f0rk.systems",
+    pwngit: "https://xlarp.f0rk.systems",
     github: "https://github.com/xlarp",
 
     email: "proto@throwing.lol",
