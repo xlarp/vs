@@ -6,8 +6,8 @@ export default {
       site: "https://tritan.gg",
     },
     {
-      title: "0days Development",
-      role: "Microservices & Backend Development",
+      title: "0days",
+      role: "Microservices, Backend Engineering",
       site: "https://0days.lol",
     },
   ],
