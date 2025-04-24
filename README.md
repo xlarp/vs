@@ -2,4 +2,4 @@
 
 ## Sites
 
-- [throwing.lol](https://throwing.lol)
+- [xvh.lol](https://xvh.lol)

@@ -33,7 +33,7 @@ function Header() {
           transition={{ delay: 0.2 }}
           className="font-mono text-lg md:text-xl tracking-widest mb-4 md:mb-0 absolute w-full text-center md:relative md:text-left left-0 pl-40"
         >
-          throwing.lol
+          {resources.default.domain}
         </motion.div>
 
         <nav className="md:absolute right-0 pr-40">

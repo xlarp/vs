@@ -12,14 +12,14 @@ export default {
     },
   ],
   default: {
-    domain: "throwing.lol",
+    domain: "xvh.lol",
     siteRepo: "https://github.com/xlarp/vs",
   },
   socials: {
     pwngit: "https://xlarp.f0rk.systems",
     github: "https://github.com/xlarp",
 
-    email: "proto@throwing.lol",
+    email: "xvht@duck.com",
     discord: {
       id: "423452508372074506",
       name: ".fxx",
